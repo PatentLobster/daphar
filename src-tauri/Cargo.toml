@@ -1,11 +1,11 @@
 [package]
-name = "tauri-react"
+name = "daphar"
 version = "0.0.0"
-description = "A Tauri App"
-authors = ["you"]
+description = "App dat parses http archives"
+authors = ["PatentLobster"]
 license = ""
-repository = ""
-edition = "2021"
+repository = "PatentLobster/daphar"
+edition = "2023"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
