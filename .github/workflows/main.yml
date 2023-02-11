@@ -54,3 +54,14 @@ jobs:
           releaseBody: 'See the assets to download and install this version.'
           releaseDraft: true
           prerelease: false
+  artifacts:
+    needs: release
+    permissions:
+      contents: write
+    runs-on: ${{ matrix.platform }}
+    steps:
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.platform }}_${{ github.ref_name }}
+          path: ${{ needs.release.outputs.artifactPaths }}
