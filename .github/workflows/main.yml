@@ -58,10 +58,10 @@ jobs:
     needs: release
     permissions:
       contents: write
-    runs-on: ${{ matrix.platform }}
+    runs-on: macos-latest
     steps:
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ matrix.platform }}_${{ github.ref_name }}
+          name: matrix.platform
           path: ${{ needs.release.outputs.artifactPaths }}
