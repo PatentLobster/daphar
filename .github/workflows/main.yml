@@ -56,9 +56,12 @@ jobs:
       contents: write
     runs-on: macos-latest
     steps:
-      - name: Upload artifacts
+      - name: echo
         uses: actions/upload-artifact@v3
-        env:
-          path: ${{ needs.release.outputs.release_id }}
         with:
           name: 'mac'
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: daphar-${{ matrix.build.suffix }}
+          path: ${{ needs.jobs.release.outputs.artifactPaths }}
