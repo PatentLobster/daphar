@@ -60,4 +60,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: matrix.platform
-          path: ${{ needs.release.outputs.artifactPaths }}
+          path: src-tauri/target/release/bundle/dmg/*.dmg
