@@ -58,6 +58,8 @@ jobs:
     steps:
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
+        env:
+          path: ${{ needs.release.outputs.release_id }}
         with:
           name: matrix.platform
-          path: src-tauri/target/release/bundle/dmg/*.dmg
+          path: ${{ path }}
