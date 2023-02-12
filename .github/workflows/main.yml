@@ -56,10 +56,6 @@ jobs:
       contents: write
     runs-on: macos-latest
     steps:
-      - name: echo
-        uses: actions/upload-artifact@v3
-        with:
-          name: 'mac'
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
