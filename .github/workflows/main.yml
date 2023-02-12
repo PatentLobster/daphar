@@ -61,5 +61,4 @@ jobs:
         env:
           path: ${{ needs.release.outputs.release_id }}
         with:
-          name: matrix.platform
-          path: ${{ path }}
+          name: 'mac'
