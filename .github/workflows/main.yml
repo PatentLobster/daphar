@@ -56,6 +56,9 @@ jobs:
       contents: write
     runs-on: macos-latest
     steps:
+      - name: Echo artifact paths
+        run: |
+              echo ${{ needs.jobs.release.outputs.artifactPaths }} a ${{ needs.release.outputs.artifactPaths }}
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
